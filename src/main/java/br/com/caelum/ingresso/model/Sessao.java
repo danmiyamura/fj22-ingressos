@@ -1,0 +1,48 @@
+package br.com.caelum.ingresso.model;
+
+import java.time.LocalTime;
+
+public class Sessao {
+	private long id;
+	private LocalTime horarioDeInicio;
+	private Filme filme;
+	private Sala sala;
+
+	public Sessao(LocalTime horario, Filme filme, Sala sala) {
+		this.horarioDeInicio = horario;
+		this.filme = filme;
+		this.sala = sala;
+	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public LocalTime getHorarioDeInicio() {
+		return horarioDeInicio;
+	}
+
+	public void setHorarioDeInicio(LocalTime horarioDeInicio) {
+		this.horarioDeInicio = horarioDeInicio;
+	}
+
+	public Filme getFilme() {
+		return filme;
+	}
+
+	public void setFilme(Filme filme) {
+		this.filme = filme;
+	}
+
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+}
