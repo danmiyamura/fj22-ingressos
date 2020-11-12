@@ -21,6 +21,9 @@ public class Sessao {
 	@ManyToOne
 	private Sala sala;
 
+	public Sessao() {
+	}
+	
 	public Sessao(LocalTime horario, Filme filme, Sala sala) {
 		this.horarioDeInicio = horario;
 		this.filme = filme;
