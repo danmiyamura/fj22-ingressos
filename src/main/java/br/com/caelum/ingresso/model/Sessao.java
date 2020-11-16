@@ -13,7 +13,7 @@ public class Sessao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private LocalTime horarioDeInicio;
+	private LocalTime horario;
 	
 	@ManyToOne
 	private Filme filme;
@@ -25,7 +25,7 @@ public class Sessao {
 	}
 	
 	public Sessao(LocalTime horario, Filme filme, Sala sala) {
-		this.horarioDeInicio = horario;
+		this.horario = horario;
 		this.filme = filme;
 		this.sala = sala;
 	}
@@ -38,12 +38,12 @@ public class Sessao {
 		this.id = id;
 	}
 
-	public LocalTime getHorarioDeInicio() {
-		return horarioDeInicio;
+	public LocalTime getHorario() {
+		return horario;
 	}
 
-	public void setHorarioDeInicio(LocalTime horarioDeInicio) {
-		this.horarioDeInicio = horarioDeInicio;
+	public void setHorario(LocalTime horario) {
+		this.horario = horario;
 	}
 
 	public Filme getFilme() {
